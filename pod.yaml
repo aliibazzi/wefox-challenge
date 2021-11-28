@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: wefox-challenge-pod
+  labels:
+    app: wefox-challenge-pod
+spec:
+  containers:
+  - image: hashicorp/http-echo:0.2.1
+    name: demo
+    ports:
+    - containerPort: 8080
+    args:
+    - -text="{'hello':'world'}"
+    - -listen=:8080
