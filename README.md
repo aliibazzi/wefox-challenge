@@ -18,6 +18,7 @@ brew link minikube
 ```
 minikube start -p wefox-challenge-cluster
 ```
+It will take up to 3 minutes for you cluster to be provisioned
 
 ### Selete the profile
 ```
@@ -38,7 +39,8 @@ alias kubectl="minikube kubectl --"
 
 #### Create the pod
 ```
-kubectl run http-echo --image=docker.io/hashicorp/http-echo:0.2.1 --labels="app=wefox-challenge-pod" -- -text='{"hello": "world"}' -listen=":8080"
+kubectl run http-echo --image=docker.io/hashicorp/http-echo:0.2.1 \
+ --labels="app=wefox-challenge-pod" -- -text='{"hello": "world"}' -listen=":8080"
 ```
 
 #### Update the image version to 0.2.3
