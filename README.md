@@ -18,7 +18,7 @@ brew link minikube
 ```
 minikube start -p wefox-challenge-cluster
 ```
-It will take up to 3 minutes for you cluster to be provisioned
+It will take up to 3 minutes for your cluster to be provisioned
 
 ### Selete the profile
 ```
